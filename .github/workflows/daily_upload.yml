@@ -1,0 +1,42 @@
+name: Daily Educational Stick-Figure Short
+
+on:
+  schedule:
+    - cron: '30 12 * * *' # Runs daily at 12:30 UTC (6:00 PM IST)
+  workflow_dispatch:       # Allows you to click "Run workflow" manually anytime
+
+permissions:
+  contents: write          # Needed to save updated history.json back to repo
+
+jobs:
+  generate-and-upload:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update && sudo apt-get install -y ffmpeg fonts-dejavu-core
+          pip install requests edge-tts moviepy pillow google-genai google-api-python-client google-auth-oauthlib
+
+      - name: Restore YouTube OAuth Token
+        run: echo '${{ secrets.YOUTUBE_TOKEN_JSON }}' > token.json
+
+      - name: Generate and Upload Daily Short
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          POLLINATIONS_API_KEY: ${{ secrets.POLLINATIONS_API_KEY }}
+        run: python daily_stick_bot.py
+
+      - name: Commit updated history.json
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add history.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Log uploaded Short topic" && git push)
