@@ -2,7 +2,10 @@ name: Daily Educational Stick-Figure Short
 
 on:
   schedule:
-    - cron: '30 12 * * *' # Runs daily at 12:30 UTC (6:00 PM IST)
+    # Morning run: ~8:30 AM IST (03:00 UTC)
+    - cron: "0 3 * * *"
+    # Evening run: ~8:30 PM IST (15:00 UTC)
+    - cron: "0 15 * * *"
   workflow_dispatch:       # Allows you to click "Run workflow" manually anytime
 
 permissions:
