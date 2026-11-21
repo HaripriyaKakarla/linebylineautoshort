@@ -2,8 +2,9 @@ name: Daily Educational Stick-Figure Short
 
 on:
   schedule:
-    - cron: "*/10 * * * *"
-  workflow_dispatch:       # Allows you to click "Run workflow" manually anytime
+    - cron: "7 3 * * *"
+    - cron: "7 15 * * *"
+  workflow_dispatch:      # Allows you to click "Run workflow" manually anytime
 
 permissions:
   contents: write          # Needed to save updated history.json back to repo
