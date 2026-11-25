@@ -1,5 +1,5 @@
 {
-  "run_count": 10,
+  "run_count": 11,
   "completed_topics": [
     "Why ice is so slippery?",
     "Why bicycles stay upright",
@@ -10,6 +10,7 @@
     "The Zeigarnik Effect Memory",
     "How Merge Sort Works",
     "Purchasing Power Parity Math",
-    "Why Knives Cut Better"
+    "Why Knives Cut Better",
+    "The Spotlight Effect Bias"
   ]
 }
