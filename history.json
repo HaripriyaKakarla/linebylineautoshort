@@ -1,5 +1,5 @@
 {
-  "run_count": 8,
+  "run_count": 9,
   "completed_topics": [
     "Why ice is so slippery?",
     "Why bicycles stay upright",
@@ -8,6 +8,7 @@
     "Rule of 72 Math",
     "Why Water Striders Walk",
     "The Zeigarnik Effect Memory",
-    "How Merge Sort Works"
+    "How Merge Sort Works",
+    "Purchasing Power Parity Math"
   ]
 }
