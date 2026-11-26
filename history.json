@@ -1,5 +1,5 @@
 {
-  "run_count": 12,
+  "run_count": 13,
   "completed_topics": [
     "Why ice is so slippery?",
     "Why bicycles stay upright",
@@ -12,6 +12,7 @@
     "Purchasing Power Parity Math",
     "Why Knives Cut Better",
     "The Spotlight Effect Bias",
-    "Dijkstra Shortest Path Algorithm"
+    "Dijkstra Shortest Path Algorithm",
+    "Dollar Cost Averaging Math"
   ]
 }
