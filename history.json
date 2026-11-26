@@ -1,5 +1,5 @@
 {
-  "run_count": 11,
+  "run_count": 12,
   "completed_topics": [
     "Why ice is so slippery?",
     "Why bicycles stay upright",
@@ -11,6 +11,7 @@
     "How Merge Sort Works",
     "Purchasing Power Parity Math",
     "Why Knives Cut Better",
-    "The Spotlight Effect Bias"
+    "The Spotlight Effect Bias",
+    "Dijkstra Shortest Path Algorithm"
   ]
 }
